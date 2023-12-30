@@ -1,0 +1,9 @@
+<?xml version="1.0" ?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                    <g id="_86_info-circle" data-name="86 info-circle">
+                                        <path
+                                            d="M16,29A13,13,0,1,1,29,16,13,13,0,0,1,16,29ZM16,5A11,11,0,1,0,27,16,11,11,0,0,0,16,5Z" />
+                                        <path d="M17,22H15V15h-.87V13H16a1,1,0,0,1,1,1Z" />
+                                        <path d="M16,11a1,1,0,1,1,0-2h0a1,1,0,0,1,0,2Z" />
+                                        <rect x="13" y="21" width="6" height="2" />
+                                    </g>
+                                </svg>
