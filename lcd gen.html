@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>led전광판 틀 생성기</title>
+    <style>
+        body {
+            height: 97vh;
+        }
+
+        section {
+            height: calc(100% - 100px);
+            overflow-y: scroll;
+        }
+
+        #ad_M {
+            min-height: 100px;
+        }
+
+        #div1 {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            margin-top: 5rem;
+        }
+
+        #div2 {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+
+        #div3 {
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>led전광판 틀 생성기</h1>
+        <p>
+            사용방법<br>
+            1. 가로 픽셀수와 세로 픽셀수 그리고 색상정보 등을 입력하세요.<br>
+            2. '생성하기' 버튼을 눌러주세요.<br>
+            3. 이름을 입력하고 '이미지로 저장'을 누르면 .png 이미지가 저장됩니다!<br><br>
+            정보<br>
+            제작자: 마인카트 <a style="margin: 0 2ch;" href="https://www.youtube.com/@minecart1019">마인카트 유튜브 채널</a>
+            <a href="https://maca1019.netlify.app/">마인카트 메인 홈페이지</a>
+        </p>
+        <div id="div1">
+            <div><label for="width">가로 픽셀 수: </label>
+                <input onchange="changeSize()" id="width" type="number" step="1" min="1">
+            </div>
+            <div><label for="height">세로 픽셀 수: </label>
+                <input onchange="changeSize()" id="height" type="number" step="1" min="1">
+            </div>
+        </div>
+        <div id="div2">
+            <div><label for="width">두께: </label>
+                <input onchange="changeSize()" id="thickness" type="number" step="1" min="1" value="1">
+            </div>
+            <div><label for="height">픽셀 크기: </label>
+                <input onchange="changeSize()" id="size" type="number" step="1" min="1" value="2">
+            </div>
+            <div><label for="height">틀 색상: </label>
+                <input onchange="changeSize()" id="color" type="color" value="#000000">
+            </div>
+        </div>
+        <div>
+            <button onclick="make()">만들기</button>
+        </div>
+        <canvas style="outline: 2px solid rgb(255, 251, 0); margin: 2rem 0;" width="480" height="112"></canvas>
+        <div id="div3">
+            <div><label for="export_name">파일 이름: </label>
+                <input id="export_name" type="text">
+                .png
+            </div>
+            <button onclick="download()">이미지로 저장</button>
+        </div>
+    </section>
+    <div id="ad_M" style="display: flex; width: 100%; max-width: 700px; height: 100px;">
+        <ins class="kakao_ad_area" data-ad-unit="DAN-jhKjdLcbppj2mxk4" data-ad-width="350" data-ad-height="100"></ins>
+    </div>
+
+    <script>
+        const canvas = document.querySelector('canvas');
+        let width = 480;
+        let height = 112;
+        let color = '#000000';
+        let thickness = 1;
+        let size = 2;
+
+        function make() {
+            let con = canvas.getContext("2d");
+            con.fillStyle = color;
+            for (let i = 0; i < width / (thickness + size); i++) {
+                con.rect(i * (thickness + size), 0, thickness, height);
+                con.fill();
+            }
+            for (let i = 0; i < height / (thickness + size); i++) {
+                con.rect(0, i * (thickness + size), width, thickness);
+                con.fill();
+            }
+        }
+
+        function changeSize() {
+            width = Math.round(Math.abs(document.getElementById('width').value * (thickness + size) + thickness));
+            height = Math.round(Math.abs(document.getElementById('height').value * (thickness + size) + thickness));
+            color = document.getElementById('color').value;
+            thickness = Math.round(Math.abs(document.getElementById('thickness').value));
+            size = Math.round(Math.abs(document.getElementById('size').value));
+            canvas.width = width;
+            canvas.height = height;
+        }
+
+        function download() {
+            const image = canvas.toDataURL();
+            const link = document.createElement("a");
+            link.href = image;
+            link.download = document.getElementById('export_name').value;
+            link.click();
+            link.innerHTML = "자동으로 다운로드가 되지 않으면 여기를 누르세요";
+        }
+    </script>
+
+    <script type="text/javascript" src="https://t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</body>
+
+</html>

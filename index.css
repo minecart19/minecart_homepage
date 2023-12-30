@@ -1,0 +1,550 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    gap: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HakgyoansimSantteutdotumL';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimSantteutdotumL.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+}
+
+@keyframes onLoad1 {
+    0% {
+        transform: translateY(40px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes onLoad2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    min-height: 360px;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+header video {
+    width: 100%;
+    z-index: 1;
+}
+
+header .header_layer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: #0000008a;
+    z-index: 2;
+}
+
+
+
+.header_layer h1 {
+    color: #fff;
+    font-size: 44pt;
+    font-weight: 600;
+    word-break: keep-all;
+    margin-bottom: 20px;
+}
+
+
+@keyframes header_layer-a {
+    0% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.header_layer a {
+    color: #fff;
+    font-size: 34pt;
+    font-weight: 500;
+    font-family: 'SUITE-Regular';
+    animation: header_layer-a 0.8s infinite ease-in-out;
+}
+
+#wave1 {
+    position: relative;
+    margin-top: -140px;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+}
+
+#wave2 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+}
+
+#wave3 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+}
+
+#wave4 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+}
+
+.wave_bgs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    overflow: visible;
+}
+
+#wave1_color {
+    background-color: #FFFFFF;
+    padding-top: 5rem;
+}
+
+#wave2_color {
+    background-color: #61A3BA;
+}
+
+#wave3_color {
+    background-color: #FFE500;
+}
+
+.menu_button_section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+}
+
+.menu_button_section a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.menu_button_section h1 {
+    font-size: 36pt;
+    font-weight: bolder;
+}
+
+.menu_buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    user-select: none;
+    text-decoration: none;
+}
+
+.menu_buttons>a {
+    display: flex;
+    width: 30%;
+    min-width: 16rem;
+}
+
+.menu_buttons>a>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.6rem 1.4rem;
+    height: 16rem;
+    width: 100%;
+    border: 1px solid #4169e1;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 1px 1px 60px -1px rgba(0, 0, 0, 0.29);
+}
+
+.menu_buttons>a>div>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.menu_buttons>a>div img {
+    width: 128px;
+    height: auto;
+}
+
+.title {
+    margin-top: 1rem;
+    font-size: 18pt;
+    font-weight: bold;
+    font-family: 'SUITE-Regular', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.describe {
+    margin-top: 0.1rem;
+    font-size: 12pt;
+    font-family: 'HakgyoansimSantteutdotumL', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.goto:hover {
+    background-color: #4169e1;
+    color: #ffffff;
+}
+
+.addon_news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.new_addon_more_addon_button {
+    display: flex;
+    position: relative;
+    margin-top: 80px;
+    padding: 15px 30px;
+    border: 4px solid #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 999;
+    text-decoration: none;
+    transition: all 0.1s;
+}
+
+.new_addon_more_addon_button>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    background-color: #ffffff;
+    border: none;
+    transition: all 0.8s;
+    z-index: 1;
+}
+
+.new_addon_more_addon_button h1 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    z-index: 999;
+}
+
+.new_addon_more_addon_button:hover>div,
+.new_addon_more_addon_button:hover>h1 {
+    width: 100%;
+    color: #eede00;
+}
+
+.addon_news_item_h1 {
+    width: 100%;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0px 1px 7px rgba(151, 151, 151, 0.5);
+    font-size: 34px;
+    font-family: 'SUITE-Regular', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    z-index: 5;
+    text-align: left;
+}
+
+.addon_news_item_h1>span {
+    color: #eede00;
+    text-shadow: 0px 1px 7px rgba(151, 151, 151, 0.5);
+    z-index: 5;
+}
+
+.addon_news_items_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.addon_news_item {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addon_news_item>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.addon_news_item_imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 21rem;
+    margin-bottom: 12px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: 0px;
+    background-color: #000;
+    overflow: hidden;
+    box-shadow: 1px 1px 40px -1px rgba(0, 0, 0, 0.29);
+}
+
+.addon_news_item_imgContainer img {
+    width: 100%;
+    height: auto;
+    z-index: 5;
+}
+
+.addon_news_item_title {
+    width: 100%;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    word-break: keep-all;
+}
+
+.addon_news_item_dec {
+    width: 100%;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 300;
+    word-break: keep-all;
+}
+
+#wave4_color {
+    position: relative;
+    width: 100%;
+    padding-top: 5rem;
+    background-color: #193150;
+    overflow: hidden;
+    gap: 0;
+}
+
+#bg {
+    width: 1920px;
+    height: 650px;
+    margin: 0;
+}
+
+#train1 {
+    position: absolute;
+    top: calc(5rem + 542px);
+    height: 57px;
+    margin: 0;
+    animation-name: train1;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#train2 {
+    position: absolute;
+    top: calc(5rem + 542px);
+    height: 57px;
+    margin: 0;
+    animation-name: train2;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes train1 {
+    0% {
+        margin-left: 1920px;
+    }
+
+    50% {
+        margin-left: 100px;
+    }
+
+    90% {
+        margin-left: -644px;
+    }
+
+    100% {
+        margin-left: -644px;
+    }
+}
+
+@keyframes train2 {
+    0% {
+        margin-left: -954px;
+    }
+
+    60% {
+        margin-left: 100%;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@media (max-width: calc(32rem/90*100 + 1.2rem)) {
+
+    header .header_layer h1 {
+        font-size: 20pt;
+    }
+
+    .goto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 7rem;
+        margin-bottom: 2rem;
+    }
+
+    .menu_buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .menu_buttons>a {
+        width: 100%;
+    }
+
+    .menu_buttons>a>div {
+        flex-direction: row;
+        gap: 5px;
+        height: 9rem
+    }
+
+    .menu_buttons>a>div>img {
+        width: 5rem;
+    }
+
+    .menu_buttons>a>div>div {
+        align-items: start;
+    }
+
+    .title {
+        margin: 0;
+    }
+
+    .deta {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .deta div {
+        align-items: baseline;
+        justify-content: center;
+        border-left: 2px solid #3f3f3f;
+        padding-left: 0.4rem;
+    }
+
+    .deta svg {
+        width: auto;
+        height: calc(30pt + 0.1rem);
+        margin-right: 0.4rem;
+    }
+}
+
+@media (max-width: 1500px) {
+    .addon_news_item_imgContainer {
+        height: 19rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .addon_news_item_imgContainer {
+        height: 14rem;
+    }
+}
+
+
+@media (max-width: 920px) {
+    .addon_news_item_imgContainer {
+        height: 22rem;
+    }
+
+    .addon_news_item {
+        width: 100%;
+        margin-bottom: 120px;
+    }
+}
+
+@media (max-width: 718px) {
+    .addon_news_item_imgContainer {
+        height: 18rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .addon_news_item_imgContainer {
+        height: 16rem;
+    }
+
+    .addon_news_item_title {
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .addon_news_item_dec {
+        font-size: 15px;
+        font-weight: 300;
+    }
+}
+
+@media (max-width: 480px) {
+    .addon_news_item_imgContainer {
+        height: 12rem;
+    }
+}
