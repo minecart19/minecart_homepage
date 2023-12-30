@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마인카트 홈페이지 minecart homepage</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="addon_list.css">
+    <script src="addon_list.js" async></script>
+    <link rel="shortcut icon" href="resource/ui/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <noscript>
+        <div style="
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-color: #fff;
+            z-index: 9999;">
+            <h1>javascript를 켜주세요.</h1>
+            <h3>javascript를 끄시면 사이트 이용이 불가합니다.</h3>
+        </div>
+    </noscript>
+
+    <!-- 네비게이션 바 -->
+    <nav>
+        <div>
+            <button id="navl" onclick="location.href='index.html'">마인카트 홈페이지</button>
+        </div>
+        <div>
+            <button class="navm" onclick="location.href='download.html'">다운로드</button>
+            <button class="navm">설명서</button>
+            <button class="navm">로그인</button>
+        </div>
+    </nav>
+
+    <!-- 내용 -->
+    <main id="download">
+        <header>
+            <h1>함께보면 좋은 사이트&프로그램</h1>
+        </header>
+        <!-- 광고 -->
+        <div class="ad_M" style="display: flex; border: 5px solid #f72206;">
+            <ins class="kakao_ad_area" data-ad-unit="DAN-jhKjdLcbppj2mxk4" data-ad-width="350"
+                data-ad-height="100"></ins>
+        </div>
+        <!-- 광고 -->
+        <script type="text/javascript" src="https://t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+        <div id="item_1" class="item_group">
+            <div id="item_1_container" class="item_container">
+                <div class="items">
+                    <div class="image_container" oncontextmenu="return false" ondragstart="return false">
+                        <img src="https://www.blockbench.net/_nuxt/img/front_page_app.6d99061.png">
+                    </div>
+                    <div class="item_desc">
+                        <div class="item_main">
+                            <h1>Blockbench</h1>
+                            <h2>Blockbench로 마인크래프트 모델을 만들 수 있습니다.
+                            </h2>
+                        </div>
+                        <div class="item_meta">
+                            <div>
+                                <h3>구분:프로그램/사이트</h3>
+                                <h3>홈페이지:https://www.blockbench.net</h3>
+                            </div>
+                            <a href="https://www.blockbench.net"><button>페이지로 이동</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="image_container" oncontextmenu="return false" ondragstart="return false">
+                        <img src="resource/ui/20231223구블장 사이트.webp">
+                    </div>
+                    <div class="item_desc">
+                        <div class="item_main">
+                            <h1>구블장의 모드 다운로드 사이트</h1>
+                            <h2>구블장님이 제작하신 사이트 이며 여러가지 모드를 다운받으실 수 있습니다.
+                            </h2>
+                        </div>
+                        <div class="item_meta">
+                            <div>
+                                <h3>구분:사이트</h3>
+                                <h3>홈페이지:https://sbm-mod-download.netlify.app</h3>
+                            </div>
+                            <a href="https://sbm-mod-download.netlify.app"><button>페이지로 이동</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="image_container" oncontextmenu="return false" ondragstart="return false">
+                        <img src="resource/ui/BECD.webp">
+                    </div>
+                    <div class="item_desc">
+                        <div class="item_main">
+                            <h1>Minecraft: Bedrock Edition Creator Documentation</h1>
+                            <h2>마크BE 애드온을 개발할 때 정보를 얻을 수 있는 사이트 입니다
+                            </h2>
+                        </div>
+                        <div class="item_meta">
+                            <div>
+                                <h3>구분:사이트</h3>
+                                <h3>홈페이지:https://learn.microsoft.com/en-us/minecraft/creator/?view=minecraft-bedrock-stable
+                                </h3>
+                            </div>
+                            <a
+                                href="https://learn.microsoft.com/en-us/minecraft/creator/?view=minecraft-bedrock-stable"><button>페이지로
+                                    이동</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+</body>
+
+</html>

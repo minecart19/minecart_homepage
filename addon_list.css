@@ -1,0 +1,392 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1600px;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15rem;
+    padding-bottom: 5rem;
+    border-radius: 30px;
+    background-color: #f5f7fa;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22)
+}
+
+#image_viewer {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    max-height: 30rem;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+#image_viewer img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#youtube_video {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    height: 0;
+    padding-bottom: 45%;
+    /* 16:9 비율 예시 */
+    margin-top: 2rem;
+}
+
+#video_iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#screenshot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+#screenshot img {
+    margin: 12px 0;
+    width: 100%;
+    max-width: 1500px;
+}
+
+#title {
+    margin-top: 1rem;
+    font-size: 32pt;
+}
+
+main ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5rem 5% 0 5%;
+    position: static;
+    padding: 25px;
+    max-width: 1000x;
+    border-radius: 15px;
+    font-size: 14pt;
+    word-break: keep-all;
+    background-color: #C9DBB2;
+}
+
+main ol span {
+    color: red;
+    font-weight: bold;
+}
+
+main ol li {
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+main ol h1 {
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 26pt;
+    color: red;
+}
+
+#mod_info {
+    list-style: none;
+    padding-left: 0px;
+}
+
+#mod_info li {
+    font-size: 13pt;
+    margin: 1px 0;
+}
+
+#mod_info li h3 {
+    display: inline;
+    font-size: 14pt;
+    font-weight: bold;
+    margin-left: 0.6ch;
+}
+
+
+main h2 {
+    font-size: 24pt;
+    margin-top: 8rem;
+    margin-bottom: 0.6rem;
+    user-select: none;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content>h1 {
+    margin-bottom: 10px;
+}
+
+#description {
+    font-size: 15pt;
+    word-break: keep-all;
+}
+
+#code_space {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 60%;
+    margin-top: 1rem;
+}
+
+#code_space input {
+    padding: 6px 6px;
+    border-radius: 8px;
+}
+
+#code_space div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+    max-width: 500px;
+    margin-right: 5px;
+}
+
+#code_input {
+    border: 1px solid #4169e1;
+    width: calc(100% - 14px);
+    /*padding + border*/
+    height: 32px;
+    font-size: 12pt;
+    letter-spacing: 0.6px;
+}
+
+#code_submit {
+    background-color: #4169e1;
+    color: #ffffff;
+    max-width: 80px;
+    width: 30%;
+    height: 46px;
+    font-size: 12pt;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+#code_submit:hover {
+    border: 1px solid #4169e1;
+    background-color: #ffffff;
+    color: #4169e1;
+}
+
+#code_space h6 {
+    font-size: 9pt;
+    margin-top: 2px;
+}
+
+#wrong_code {
+    user-select: none;
+    opacity: 0;
+}
+
+#rule {
+    display: flex;
+    margin-top: 1.4rem;
+    font-size: 15pt;
+}
+
+#download {
+    border: 1px solid #4169e1;
+    border-radius: 15px;
+    padding: 9px 5px;
+    text-decoration: none;
+    color: #4169e1;
+    margin-top: 1rem;
+    font-size: 16pt;
+}
+
+#download:hover {
+    background-color: #4169e1;
+    color: #ffffff;
+}
+
+
+#download_option>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+#download_option>div>p {
+    font-size: 16px;
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+#download_option>div>select {
+    height: 18px;
+    font-size: 15px;
+    outline: 1px solid #292929;
+    border-radius: 5px;
+}
+
+#download_option>div>select:focus {
+    outline: 2px double #000000;
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    #title {
+        font-size: 21pt;
+    }
+
+    main ol {
+        font-size: 11pt;
+    }
+
+    main ol li {
+        width: 90%;
+    }
+
+    main ol h1 {
+        font-size: 26pt;
+    }
+
+    #mod_info li {
+        font-size: 11.5pt;
+    }
+
+    #mod_info li h3 {
+        font-size: 12.5pt;
+        margin-left: 0.4ch;
+    }
+
+    #content>h2 {
+        font-size: 20pt;
+    }
+
+    #description {
+        font-size: 13pt;
+    }
+
+    #rule {
+        margin-top: 1rem;
+        font-size: 13pt;
+    }
+
+    #download {
+        border-radius: 15px;
+        padding: 6px 3px;
+        font-size: 13pt;
+    }
+
+    #download_option>div>p {
+        font-size: 13.5px;
+    }
+
+    #download_option>div>select {
+        height: 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    #title {
+        font-size: 17pt;
+    }
+
+    main ol {
+        font-size: 9pt;
+    }
+
+    main ol li {
+        width: 90%;
+    }
+
+    main ol h1 {
+        font-size: 24pt;
+    }
+
+    #mod_info li {
+        font-size: 10pt;
+    }
+
+    #mod_info li h3 {
+        font-size: 11pt;
+        margin-left: 0.25ch;
+    }
+
+    #description {
+        font-size: 10pt;
+    }
+
+    #content h2 {
+        font-size: 16pt;
+    }
+
+    #code_space {
+        width: 90%;
+    }
+
+    #code_space input {
+        padding: 2px 2px;
+        border-radius: 6px;
+    }
+
+    #code_space div {
+        margin-right: 2px;
+    }
+
+    #code_input {
+        height: 18px;
+        font-size: 7pt;
+        letter-spacing: 0.2px;
+        width: calc(100% - 6px);
+        /*padding + border*/
+    }
+
+    #code_submit {
+        font-size: 7pt;
+        max-width: 50px;
+        height: 24px;
+        margin-left: 2px;
+    }
+
+    #code_space h6 {
+        font-size: 5pt;
+        margin-top: 1px;
+    }
+
+    #rule {
+        margin-top: 0.6rem;
+        font-size: 10pt;
+    }
+
+    #download {
+        border-radius: 10px;
+        padding: 4px 2px;
+        font-size: 11pt;
+    }
+
+    #download_option>div>p {
+        font-size: 11px;
+    }
+
+    #download_option>div>select {
+        height: 14px;
+        font-size: 12px;
+    }
+}

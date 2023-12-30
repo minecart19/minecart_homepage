@@ -1,0 +1,384 @@
+#download {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    margin-left: 15%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+    margin-top: 64px;
+}
+
+header h1 {
+    color: #4169e1;
+    font-size: 72pt;
+    font-weight: bolder;
+    word-break: keep-all;
+    text-align: center;
+}
+
+#view_type,
+#sort_type {
+    display: flex;
+    align-items: center;
+}
+
+#view_type>p,
+#sort_type>p {
+    margin-right: 5px;
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+#items_option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin-top: 20px;
+    padding: 0 5%;
+    background-color: #f3f3f3;
+    border-top: 4px solid #000;
+}
+
+#items_option #view_type img {
+    height: 36px;
+    margin: 0 10px;
+}
+
+
+#mod_list {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+#mod_list p {
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+#mod_list ol {
+    margin-left: 1rem;
+    margin-bottom: 12px;
+}
+
+#mod_list ol a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+hr {
+    width: 100%;
+    margin-top: 6rem;
+    border: 1px solid #7a7a7a;
+}
+
+.item_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.item_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.item_group_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 100%;
+    user-select: none;
+    cursor: pointer;
+}
+
+.item_group_title:hover {
+    background-color: #e8ffd3;
+}
+
+.item_group_title>div {
+    display: flex;
+    flex-direction: column;
+    max-width: 84%;
+    word-break: keep-all;
+}
+
+.item_group_title>h3 {
+    font-size: 25pt;
+    margin-right: 3ch;
+    text-decoration: underline;
+}
+
+
+
+.items h2 {
+    font-size: 20pt;
+}
+
+.item_group_title p {
+    margin-top: 0.3rem;
+    font-size: 14pt;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    margin: 0.5rem 0;
+    padding: 1rem 1rem;
+    border-top: 1px dotted #c5c5c5;
+    min-width: 20rem;
+}
+
+.items:hover {
+    background-color: lightyellow;
+}
+
+.image_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 15rem;
+    max-width: 15rem;
+}
+
+.image_container .full_screen_button {
+    display: none;
+    position: absolute;
+    top: 1px;
+    left: 1rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    width: 70px;
+    height: 24px;
+    background-color: #444;
+    opacity: 0.5;
+    user-select: none;
+}
+
+.image_container .full_screen_button h1 {
+    font-size: 4pt;
+    color: #ffffff;
+}
+
+.image_container>img {
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px #444;
+    transition: all 0.2s;
+    min-width: 15rem;
+    height: auto;
+}
+
+.item_desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 1.5rem;
+    width: 100%;
+}
+
+.item_desc .item_meta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.item_desc h1 {
+    font-size: 20pt;
+    margin-bottom: 0.4rem;
+}
+
+.item_desc h2 {
+    font-weight: normal;
+    font-size: 13pt;
+}
+
+.item_desc h3 {
+    font-weight: normal;
+    font-size: 10pt;
+    color: #c5c5c5;
+}
+
+.item_meta button {
+    /* width: 80px;
+    height: 24px; */
+    min-width: 90px;
+    padding: 3px 18px;
+    color: #4169e1;
+    background-color: #ffffff;
+    border: 1px solid #4169e1;
+    border-radius: 10px;
+    font-size: 15pt;
+    transition: all 0.1s ease-in;
+}
+
+.item_meta div {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    text-overflow: ellipsis;
+}
+
+.item_meta button:hover {
+    color: #ffffff;
+    background-color: #4169e1;
+    cursor: pointer;
+}
+
+.item_meta button:active {
+    transform: scale(0.95);
+}
+
+.ad_M,
+.ad_PC {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    header>h1 {
+        font-size: 46pt;
+    }
+}
+
+/* 태블릿, 노트북 */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .item_group h2 {
+        font-size: 17pt;
+    }
+
+    .item_group_title p {
+        font-size: 11pt;
+    }
+
+    .items {
+        min-width: 15rem;
+    }
+
+    .item_group_title>h3 {
+        font-size: 19pt;
+        margin-right: 10px;
+    }
+
+    .image_container {
+        width: 10rem;
+        max-width: 10rem;
+    }
+
+    .image_container>img {
+        width: 10rem;
+        min-width: 10rem;
+    }
+
+    .item_desc h1 {
+        font-size: 17pt;
+    }
+
+    .item_desc h2 {
+        font-size: 11pt;
+    }
+
+    .item_desc h3 {
+        font-size: 9pt;
+    }
+
+    .item_meta button {
+        font-size: 10pt;
+        padding: 2.5px 14px;
+    }
+}
+
+
+/* 모바일 */
+@media (max-width: 767px) {
+    #download {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .item_group_title p {
+        font-size: 10pt;
+    }
+
+    .item_group_title>h3 {
+        font-size: 14pt;
+        margin-right: 5px;
+    }
+
+
+    .item_group h2 {
+        font-size: 16pt;
+    }
+
+    .item_desc {
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .items {
+        min-width: 10rem;
+    }
+
+    .image_container {
+        width: 7.5rem;
+        max-width: 7.5rem;
+    }
+
+    .image_container>img {
+        width: 7.5rem;
+        min-width: 7.5rem;
+    }
+
+    .item_desc h1 {
+        font-size: 14pt;
+    }
+
+    .item_desc h2 {
+        font-size: 8pt;
+    }
+
+    .item_desc h3 {
+        font-size: 6pt;
+    }
+
+    .item_meta button {
+        font-size: 9pt;
+        padding: 2px 8px;
+    }
+}
+
+@media (max-width: 425) {
+    header>h1 {
+        font-size: 30pt;
+    }
+
+
+    .item_group_title p {
+        font-size: 9pt;
+    }
+
+    .item_group_title>h3 {
+        font-size: 14pt;
+    }
+}

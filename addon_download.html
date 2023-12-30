@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모드별 상세정보</title>
+    <link rel="shortcut icon" href="resource/ui/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="addon_download.css">
+</head>
+
+<body>
+    <noscript>
+        <div style="
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-color: #fff;
+            z-index: 9999;">
+            <h1>javascript를 켜주세요.</h1>
+            <h3>javascript를 끄시면 사이트 이용이 불가합니다.</h3>
+        </div>
+    </noscript>
+    <!-- 네비게이션 바 -->
+    <nav>
+        <div>
+            <button id="navl" onclick="location.href='index.html'">마인카트 홈페이지</button>
+        </div>
+        <div>
+            <button class="navm" onclick="location.href='download.html'">다운로드</button>
+            <button class="navm">설명서</button>
+            <button class="navm">로그인</button>
+        </div>
+    </nav>
+
+    <!-- <ins id="ad_PC_verti" class="kakao_ad_area" data-ad-unit = "DAN-na9pXxWC4X7Jv4t7" data-ad-width = "160" data-ad-height = "600"
+    style="position: fixed; left: calc(100vw - 160px - 50px); margin-top: calc((100vh - 600px) / 2); z-index: 10;"></ins> -->
+
+    <main>
+        <div id="image_viewer">
+            <img id="img"
+                src="https://www.minecraft.net/content/dam/games/minecraft/key-art/cow-header.jpg.transform/minecraft-image-large/image.jpg"
+                alt="">
+        </div>
+        <h1 id="title">모드 이름</h1>
+
+        <div id="content">
+
+            <ol type="1">
+                <div style="display: flex; margin-left: 5%;">
+                    <h1 id="mod_name"></h1>
+                    <h1>이용약관</h1>
+                </div>
+                <li>이 페이지에서 배포하는 모든 자료와 그 내용물(이하 '모드')를 사용하려면 아래 약관을 따라야 하며, 모든 책임은 사용자에게 있습니다.</li>
+                <li>'모드'를 사용중 발생한 불이익에 대해서 저희는 일제히 책임지지 않습니다.</li>
+                <li>'모드'를 이용하여 수익창출을 할 수 없습니다.</li>
+                <li>'모드'를 공유, 재배포, 수정 혹은 '모드'안의 파일등을 추출하는 행위는 절대 금지합니다.</li>
+                <li>이 페이지 링크와 제작자를 기입하면 '모드'의 사진이나 동영상 을 업로드 할 수 있습니다.</li>
+                <li>'모드'를 다운받기 위해 필요한 코드를 다른사람에게 공유하지 마십시오.</li>
+            </ol>
+
+            <h2>모드 설명</h2>
+            <p id="description">모드 설명</p>
+
+            <div id="youtube_video">
+                <iframe id="video_iframe" src="" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+
+            <h2>스크린샷</h2>
+            <div id="screenshot">
+            </div>
+
+
+            <h2>모드 정보</h2>
+            <ul id="mod_info">
+                <li>최신버전:<h3 class="mod_info"></h3>
+                </li>
+                <li>최근수정일:<h3 class="mod_info"></h3>
+                </li>
+                <li>제작자:<h3 class="mod_info"></h3>
+                </li>
+                <li>실험기능:<h3 class="mod_info"></h3>
+                </li>
+                <li>추가필요모드:<h3 class="mod_info"></h3>
+                </li>
+            </ul>
+
+            <ins class="kakao_ad_area" style="margin-top: 5rem;" data-ad-unit="DAN-fA0reb361RuiF2Wq" data-ad-width="300"
+                data-ad-height="250"></ins>
+
+
+
+            <h2>다운로드</h2>
+            <div id="code_space">
+                <div>
+                    <input id="code_input" type="text" placeholder="코드를 입력해주세요." autocomplete="off">
+                    <h6 id="wrong_code"></h6>
+                </div>
+                <input id="code_submit" type="submit" value="코드 확인" onclick="check()">
+            </div>
+
+            <h1 id="rule"><span style="color: red;">*</span>다운로드 버튼을 누르면 위의 약관에 동의한것으로 간주합니다.</h1>
+
+            <div id="download_option">
+                <div>
+                    <p>버전선택:</p>
+                    <select onclick="downrel()" id="version_select">
+                    </select>
+                </div>
+                <a id="download" style="display: none;" href="" download target="_self">여기를 눌러 다운로드</a>
+            </div>
+
+            <h5 style="font-size: 15px; color: lightpink ;width: 80%; margin: 8rem 0 0 0;">광고클릭은 개발자에게 도움이 됩니다?!</h5>
+            <ins style="max-width: 80%; border: 1px solid #000;" class="kakao_ad_area"
+                data-ad-unit="DAN-jhKjdLcbppj2mxk4" data-ad-width="350" data-ad-height="100"></ins>
+        </div>
+
+    </main>
+
+
+    <script src="cc.js"></script>
+    <script src="addon_download.js"></script>
+    <script type="text/javascript" src="https://t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</body>
+
+</html>
