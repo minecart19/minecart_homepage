@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Keywords"
+        content="마인카트, 마인카트 홈페이지, 마카 사이트, minecart homepage, minecart1019, 마크 지하철, 마크 기차, minecraft train, minecraft train addon" />
+    <meta name="description" content="마인크래프트BE 전용 열차및 다른 애드온을 다운 받고 플레이 하고 다양한 정보를 얻어보세요!">
+    <title>마인카트 홈페이지 minecart homepage</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="indexpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <meta name="google-site-verification" content="Xh3ls7oV2Qz2YF9so-7rtf5XBOqhPLzpVA2BFUaFDSk" />
+
+    <style>
+        .snowflake {
+            color: #fff;
+            font-size: 1em;
+            font-family: Arial;
+            text-shadow: 0 0 2px #000;
+        }
+
+        @-webkit-keyframes snowflakes-fall {
+            0% {
+                top: -10%
+            }
+
+            100% {
+                top: 100%
+            }
+        }
+
+        @-webkit-keyframes snowflakes-shake {
+            0% {
+                -webkit-transform: translateX(0px);
+                transform: translateX(0px)
+            }
+
+            50% {
+                -webkit-transform: translateX(80px);
+                transform: translateX(80px)
+            }
+
+            100% {
+                -webkit-transform: translateX(0px);
+                transform: translateX(0px)
+            }
+        }
+
+        @keyframes snowflakes-fall {
+            0% {
+                top: -10%
+            }
+
+            100% {
+                top: 100%
+            }
+        }
+
+        @keyframes snowflakes-shake {
+            0% {
+                transform: translateX(0px)
+            }
+
+            50% {
+                transform: translateX(80px)
+            }
+
+            100% {
+                transform: translateX(0px)
+            }
+        }
+
+        .snowflake {
+            position: fixed;
+            top: -20px;
+            z-index: 99999;
+            width: 20px;
+            height: 20px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: default;
+            -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+            -webkit-animation-duration: 10s, 3s;
+            -webkit-animation-timing-function: linear, ease-in-out;
+            -webkit-animation-iteration-count: infinite, infinite;
+            -webkit-animation-play-state: running, running;
+            animation-name: snowflakes-fall, snowflakes-shake;
+            animation-duration: 10s, 3s;
+            animation-timing-function: linear, ease-in-out;
+            animation-iteration-count: infinite, infinite;
+            animation-play-state: running, running
+        }
+
+        .snowflake:nth-of-type(0) {
+            left: 1%;
+            animation-delay: 0s, 0s
+        }
+
+        .snowflake:nth-of-type(1) {
+            left: 10%;
+            animation-delay: 1s, 1s
+        }
+
+        .snowflake:nth-of-type(2) {
+            left: 20%;
+            animation-delay: 6s, .5s
+        }
+
+        .snowflake:nth-of-type(3) {
+            left: 30%;
+            animation-delay: 4s, 2s
+        }
+
+        .snowflake:nth-of-type(4) {
+            left: 40%;
+            animation-delay: 2s, 2s
+        }
+
+        .snowflake:nth-of-type(5) {
+            left: 50%;
+            animation-delay: 8s, 3s
+        }
+
+        .snowflake:nth-of-type(6) {
+            left: 60%;
+            animation-delay: 6s, 2s
+        }
+
+        .snowflake:nth-of-type(7) {
+            left: 70%;
+            animation-delay: 2.5s, 1s
+        }
+
+        .snowflake:nth-of-type(8) {
+            left: 80%;
+            animation-delay: 1s, 0s
+        }
+
+        .snowflake:nth-of-type(9) {
+            left: 90%;
+            animation-delay: 3s, 1.5s
+        }
+
+        .snowflake:nth-of-type(10) {
+            left: 5%;
+            animation-delay: 7s, 2s
+        }
+
+        .snowflake:nth-of-type(11) {
+            left: 15%;
+            animation-delay: 3s, 1.5s
+        }
+
+        .snowflake:nth-of-type(12) {
+            left: 25%;
+            animation-delay: 8s, 5s
+        }
+
+        .snowflake:nth-of-type(13) {
+            left: 35%;
+            animation-delay: 5s, 3s
+        }
+
+        .snowflake:nth-of-type(14) {
+            left: 55%;
+            animation-delay: 7.2s, 1.7s
+        }
+
+        .snowflake:nth-of-type(15) {
+            left: 65%;
+            animation-delay: 4s, 1.5s
+        }
+
+        .snowflake:nth-of-type(16) {
+            left: 75%;
+            -webkit-animation-delay: 3s, 1.5s;
+            animation-delay: 0.7s, 2s
+        }
+
+        .snowflake:nth-of-type(17) {
+            left: 85%;
+            animation-delay: 3s, 0s
+        }
+
+        .snowflake:nth-of-type(18) {
+            left: 95%;
+            animation-delay: 0s, 2s
+        }
+    </style>
+</head>
+
+<body>
+    <noscript>
+        <div style="
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-color: #fff;
+            z-index: 9999;">
+            <h1>javascript를 켜주세요.</h1>
+        </div>
+    </noscript>
+
+    <header>
+        <video src="resource/minecart_home_video_v2 360p.mp4" autoplay muted loop>
+        </video>
+        <div class="header_layer">
+            <h1>마인카트 홈페이지에 오신것을 환영합니다!</h1>
+            <!-- <a href="#wave1_color">Let's Go!</a> -->
+        </div>
+    </header>
+
+
+    <div class="snowflake">
+        ❅
+    </div>
+    <div class="snowflake">
+        ❅
+    </div>
+    <div class="snowflake">
+        ❆
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+    <div class="snowflake">
+        ❅
+    </div>
+    <div class="snowflake">
+        ❆
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+    <div class="snowflake">
+        ❅
+    </div>
+    <div class="snowflake">
+        ❆
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+
+    <!-- 네비게이션 바 -->
+    <nav>
+        <div>
+            <button id="navl" onclick="location.href='index.html'">마인카트 홈페이지</button>
+        </div>
+        <div>
+            <button class="navm" onclick="location.href='download.html'">다운로드</button>
+            <button class="navm">설명서</button>
+            <button class="navm"></button>
+        </div>
+    </nav>
+
+    <div>
+
+        <!-- 내용 시작 -->
+        <main>
+            <!-- <svg id="wave1" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1"
+                xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                        <stop stop-color="#A6CF98" offset="0%"></stop>
+                        <stop stop-color="#A6CF98" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+                <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+                    d="M0,20L120,26.7C240,33,480,47,720,43.3C960,40,1200,20,1440,18.3C1680,17,1920,33,2160,40C2400,47,2640,43,2880,48.3C3120,53,3360,67,3600,70C3840,73,4080,67,4320,68.3C4560,70,4800,80,5040,75C5280,70,5520,50,5760,50C6000,50,6240,70,6480,70C6720,70,6960,50,7200,38.3C7440,27,7680,23,7920,28.3C8160,33,8400,47,8640,46.7C8880,47,9120,33,9360,26.7C9600,20,9840,20,10080,16.7C10320,13,10560,7,10800,18.3C11040,30,11280,60,11520,70C11760,80,12000,70,12240,70C12480,70,12720,80,12960,81.7C13200,83,13440,77,13680,61.7C13920,47,14160,23,14400,26.7C14640,30,14880,60,15120,70C15360,80,15600,70,15840,68.3C16080,67,16320,73,16560,68.3C16800,63,17040,47,17160,38.3L17280,30L17280,100L17160,100C17040,100,16800,100,16560,100C16320,100,16080,100,15840,100C15600,100,15360,100,15120,100C14880,100,14640,100,14400,100C14160,100,13920,100,13680,100C13440,100,13200,100,12960,100C12720,100,12480,100,12240,100C12000,100,11760,100,11520,100C11280,100,11040,100,10800,100C10560,100,10320,100,10080,100C9840,100,9600,100,9360,100C9120,100,8880,100,8640,100C8400,100,8160,100,7920,100C7680,100,7440,100,7200,100C6960,100,6720,100,6480,100C6240,100,6000,100,5760,100C5520,100,5280,100,5040,100C4800,100,4560,100,4320,100C4080,100,3840,100,3600,100C3360,100,3120,100,2880,100C2640,100,2400,100,2160,100C1920,100,1680,100,1440,100C1200,100,960,100,720,100C480,100,240,100,120,100L0,100Z">
+                </path>
+            </svg> -->
+
+            <section class="wave_bgs" id="wave1_color">
+                <!-- 메뉴버튼 -->
+                <div class="menu_button_section">
+                    <h1>주요메뉴</h1>
+                    <div class="menu_buttons">
+                        <a href="download.html">
+                            <div>
+                                <img src="./resource/ui/menu_addon_download.svg">
+                                <div>
+                                    <p class="title">마크BE 애드온</p>
+                                    <p class="describe">다양한 마인크래프트BE 애드온를 구경하고 다운로드 하세요!</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="lcd gen.html">
+                            <div>
+                                <img src="./resource/ui/menu_tool.svg">
+                                <div>
+                                    <p class="title">도구들</p>
+                                    <p class="describe">전광판 이미지 제작기등 다양한 도구들을 둘러보세요!(현재는 led전광판 틀 생성기만 있음)</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="links.html">
+                            <div>
+                                <img src="./resource/ui/menu_link.svg">
+                                <div>
+                                    <p class="title">함께보면 좋은 사이트/프로그램</p>
+                                    <p class="describe">모드제작,게임플레이,자료공유 등과 관련된 여러 사이트들와 프로그램들을 소개합니다!</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="fit_content_padding" style="height: 160px"></div>
+                <svg id="wave2" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 110" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+                            <stop stop-color="#61A3BA" offset="0%"></stop>
+                            <stop stop-color="#61A3BA" offset="100%"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-1)"
+                        d="M0,22L80,29.3C160,37,320,51,480,47.7C640,44,800,22,960,20.2C1120,18,1280,37,1440,44C1600,51,1760,48,1920,53.2C2080,59,2240,73,2400,77C2560,81,2720,73,2880,75.2C3040,77,3200,88,3360,82.5C3520,77,3680,55,3840,55C4000,55,4160,77,4320,77C4480,77,4640,55,4800,42.2C4960,29,5120,26,5280,31.2C5440,37,5600,51,5760,51.3C5920,51,6080,37,6240,29.3C6400,22,6560,22,6720,18.3C6880,15,7040,7,7200,20.2C7360,33,7520,66,7680,77C7840,88,8000,77,8160,77C8320,77,8480,88,8640,89.8C8800,92,8960,84,9120,67.8C9280,51,9440,26,9600,29.3C9760,33,9920,66,10080,77C10240,88,10400,77,10560,75.2C10720,73,10880,81,11040,75.2C11200,70,11360,51,11440,42.2L11520,33L11520,110L11440,110C11360,110,11200,110,11040,110C10880,110,10720,110,10560,110C10400,110,10240,110,10080,110C9920,110,9760,110,9600,110C9440,110,9280,110,9120,110C8960,110,8800,110,8640,110C8480,110,8320,110,8160,110C8000,110,7840,110,7680,110C7520,110,7360,110,7200,110C7040,110,6880,110,6720,110C6560,110,6400,110,6240,110C6080,110,5920,110,5760,110C5600,110,5440,110,5280,110C5120,110,4960,110,4800,110C4640,110,4480,110,4320,110C4160,110,4000,110,3840,110C3680,110,3520,110,3360,110C3200,110,3040,110,2880,110C2720,110,2560,110,2400,110C2240,110,2080,110,1920,110C1760,110,1600,110,1440,110C1280,110,1120,110,960,110C800,110,640,110,480,110C320,110,160,110,80,110L0,110Z">
+                    </path>
+                </svg>
+            </section>
+
+
+
+            <section class="wave_bgs" id="wave2_color">
+                <div class="addon_news">
+                    <div class="addon_news_items_container">
+                        <div class="addon_news_item">
+                            <h1 onload="load_ani1(this, '1s', 'ease-in-out', '0s', 1)" class="addon_news_item_h1">
+                                <span>새로나온</span> 팩
+                            </h1>
+                            <div>
+                                <div class="addon_news_item_imgContainer">
+                                    <img src="resource/n1tc/n1tc_1.webp" alt="이미지">
+                                </div>
+                                <div>
+                                    <div class="addon_news_item_title">MTC용 1호선 납작이</div>
+                                    <div class="addon_news_item_dec">MTC로 플레이 가능한 1호선 납작이 입니다. 이 애드온은 무료배포 입니다.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addon_news_item">
+                            <h1 class="addon_news_item_h1"><span>새로나온</span> 영상</h1>
+                            <div>
+                                <div class="addon_news_item_imgContainer">
+                                    <iframe width="100%" height="100%"
+                                        src="https://www.youtube.com/embed/_NxGA9i8Lcc?si=kqdQVs4OiSZnD5d8"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div>
+                                    <div class="addon_news_item_title">MTC모드 다운 방법</div>
+                                    <div class="addon_news_item_dec">새로운 MCBE MTC모드를 다운받으세요!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="new_addon_more_addon_button" href="download.html" target="_self">
+                        <div></div>
+                        <h1>다른 것들도 더 찾아보기</h1>
+                    </a>
+                </div>
+
+                <div class="fit_content_padding" style="height: 60px"></div>
+
+                <svg id="wave3" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 180" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="sw-gradient-4" x1="0" x2="0" y1="1" y2="0">
+                            <stop stop-color="#FFE500" offset="0%"></stop>
+                            <stop stop-color="#FFE500" offset="100%"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-4)"
+                        d="M0,108L34.3,99C68.6,90,137,72,206,60C274.3,48,343,42,411,54C480,66,549,96,617,114C685.7,132,754,138,823,141C891.4,144,960,144,1029,135C1097.1,126,1166,108,1234,111C1302.9,114,1371,138,1440,147C1508.6,156,1577,150,1646,147C1714.3,144,1783,144,1851,141C1920,138,1989,132,2057,123C2125.7,114,2194,102,2263,84C2331.4,66,2400,42,2469,51C2537.1,60,2606,102,2674,108C2742.9,114,2811,84,2880,78C2948.6,72,3017,90,3086,81C3154.3,72,3223,36,3291,36C3360,36,3429,72,3497,84C3565.7,96,3634,84,3703,69C3771.4,54,3840,36,3909,39C3977.1,42,4046,66,4114,63C4182.9,60,4251,30,4320,18C4388.6,6,4457,12,4526,12C4594.3,12,4663,6,4731,3C4800,0,4869,0,4903,0L4937.1,0L4937.1,180L4902.9,180C4868.6,180,4800,180,4731,180C4662.9,180,4594,180,4526,180C4457.1,180,4389,180,4320,180C4251.4,180,4183,180,4114,180C4045.7,180,3977,180,3909,180C3840,180,3771,180,3703,180C3634.3,180,3566,180,3497,180C3428.6,180,3360,180,3291,180C3222.9,180,3154,180,3086,180C3017.1,180,2949,180,2880,180C2811.4,180,2743,180,2674,180C2605.7,180,2537,180,2469,180C2400,180,2331,180,2263,180C2194.3,180,2126,180,2057,180C1988.6,180,1920,180,1851,180C1782.9,180,1714,180,1646,180C1577.1,180,1509,180,1440,180C1371.4,180,1303,180,1234,180C1165.7,180,1097,180,1029,180C960,180,891,180,823,180C754.3,180,686,180,617,180C548.6,180,480,180,411,180C342.9,180,274,180,206,180C137.1,180,69,180,34,180L0,180Z">
+                    </path>
+                </svg>
+            </section>
+
+            <section class="wave_bgs" id="wave3_color">
+                <div class="social">
+                    <div>
+                    </div>
+                </div>
+                <div class="fit_content_padding" style="height: 150px"></div>
+                <svg id="wave4" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 140" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="sw-gradient-3" x1="0" x2="0" y1="1" y2="0">
+                            <stop stop-color="#193150" offset="0%"></stop>
+                            <stop stop-color="#193150" offset="100%"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path style="transform:translate(0, 0px);" fill="url(#sw-gradient-3)"
+                        d="M0,56L40,63C80,70,160,84,240,86.3C320,89,400,79,480,63C560,47,640,23,720,16.3C800,9,880,19,960,35C1040,51,1120,75,1200,86.3C1280,98,1360,98,1440,102.7C1520,107,1600,117,1680,102.7C1760,89,1840,51,1920,39.7C2000,28,2080,42,2160,39.7C2240,37,2320,19,2400,14C2480,9,2560,19,2640,37.3C2720,56,2800,84,2880,98C2960,112,3040,112,3120,109.7C3200,107,3280,103,3360,102.7C3440,103,3520,107,3600,91C3680,75,3760,37,3840,25.7C3920,14,4000,28,4080,39.7C4160,51,4240,61,4320,65.3C4400,70,4480,70,4560,77C4640,84,4720,98,4800,102.7C4880,107,4960,103,5040,98C5120,93,5200,89,5280,79.3C5360,70,5440,56,5520,53.7C5600,51,5680,61,5720,65.3L5760,70L5760,140L5720,140C5680,140,5600,140,5520,140C5440,140,5360,140,5280,140C5200,140,5120,140,5040,140C4960,140,4880,140,4800,140C4720,140,4640,140,4560,140C4480,140,4400,140,4320,140C4240,140,4160,140,4080,140C4000,140,3920,140,3840,140C3760,140,3680,140,3600,140C3520,140,3440,140,3360,140C3280,140,3200,140,3120,140C3040,140,2960,140,2880,140C2800,140,2720,140,2640,140C2560,140,2480,140,2400,140C2320,140,2240,140,2160,140C2080,140,2000,140,1920,140C1840,140,1760,140,1680,140C1600,140,1520,140,1440,140C1360,140,1280,140,1200,140C1120,140,1040,140,960,140C880,140,800,140,720,140C640,140,560,140,480,140C400,140,320,140,240,140C160,140,80,140,40,140L0,140Z">
+                    </path>
+                </svg>
+            </section>
+
+            <section class="wave_bgs" id="wave4_color">
+                <!-- <img src="https://github.com/minecart1019/minecart-hp/blob/main/maca_bottom_background.png?raw=true"
+                    alt="" id="bg"> -->
+                <!-- <img src="https://github.com/minecart1019/minecart-hp/blob/main/maca_bottom_train.png?raw=true" alt=""
+                    id="train"> -->
+
+                <img src="resource/ui/maca_bottom-002.png" alt="" id="bg">
+
+                <img src="resource/ui/train_cube1.png" alt="" id="train1">
+
+                <img src="resource/ui/train_cube2.png" alt="" id="train2">
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div>
+            <ul>
+                <li class="footer_li_name">소개</li>
+                <li><a href="">마인카트</a></li>
+                <li><a href="">구블장</a></li>
+            </ul>
+            <ul>
+                <li class="footer_li_name">다운로드</li>
+                <li><a href="">엔티티 컨트롤러</a></li>
+                <li><a href="">1호선 납작이</a></li>
+                <li><a href="">6호선</a></li>
+                <li><a href="">1호선 신도색 주둥이</a></li>
+                <li><a href="">1호선 큐브</a></li>
+                <li><a href="">도로제작팩</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+            <ul>
+                <li class="footer_li_name">지원</li>
+                <li><a href="">모드적용</a></li>
+                <li><a href="">mca모드 사용법</a></li>
+                <li><a href="">자주 묻는 질문</a></li>
+                <li><a href="">개인정보 처리 방침</a></li>
+            </ul>
+            <ul>
+                <li class="footer_li_name">커뮤니티</li>
+                <li><a href="https://www.youtube.com/channel/UCeNbq2kJtDXZ4tCYBcFeTOQ" target="_blank">마인카트
+                        유튜브채널</a>
+                </li>
+                <li><a href="" target="_blank">마인카트 채팅방</a></li>
+                <li><a href="https://sbm-mod-download.netlify.app/" target="_blank">구블장 홈페이지</a></li>
+                <li><a href="https://www.youtube.com/channel/UCe6nZHG6fD8qcAxDvre7Yjw" target="_blank">구블장 유튜브채널</a>
+                </li>
+                <li><a href="" target="_blank">구블장 디스코드방</a></li>
+                <li><a href="https://www.twitter.com/leyOFyv91qyEXkP" target="_blank">구블장 트위터</a></li>
+            </ul>
+            <form action="">
+                문의하기
+                <input id="con_name" type="text" placeholder="이름(닉네임) 입력" autocomplete="off">
+                <input id="con_email" type="email" placeholder="이메일 입력" autocomplete="off">
+                <textarea id="con_content" placeholder="문의내용 입력(최대 500자)" maxlength="500" autocomplete="off"></textarea>
+                <input id="con_submit" type="submit" onclick="alert('아직 이 기능은 작동하지 않습니다.')">
+            </form>
+        </div>
+    </footer>
+
+
+    <!-- 주의: 사이트를 배포할 때는 "development.js"를 "production.min.js"로 대체하세요. -->
+    <!-- <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script> -->
+    <!-- <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script> -->
+
+    <!-- 만든 React 컴포넌트를 실행. -->
+    <!-- <script src="like_button.js"></script> -->
+</body>
+
+</html>
