@@ -24,6 +24,9 @@ switch (name) {
     case "tcak":
         tcak();
         break;
+    case "test":
+        test();
+        break;
     default:
         notf();
 }
@@ -57,23 +60,25 @@ function downrel() {
     const selected_ver = document.getElementById("version_select").options[document.getElementById("version_select").selectedIndex].value;
     switch (name) {
         case "mtt":
-            down.href = "files/mca테스트용 열차 " + selected_ver + "(마인카트 제작).zip";
+            down.href = "/files/mca테스트용 열차 " + selected_ver + "(마인카트 제작).zip";
             break;
         case "n1ca":
-            down.href = "files/1호선 납작이 " + selected_ver + "(마인카트 제작).zip";
+            down.href = "/files/1호선 납작이 " + selected_ver + "(마인카트 제작).zip";
             break;
         case "c1ca":
-            down.href = "files/1호선 큐브 " + selected_ver + "(마인카트 제작).zip";
+            down.href = "/files/1호선 큐브 " + selected_ver + "(마인카트 제작).zip";
             break;
         case "entc":
-            down.href = selected_ver == "3.0.2" ? "files/엔티티컨트롤러 Entitycontroller V3.zip" : "files/엔티티 컨트롤러Entity Controller " + selected_ver + "(마인카트 제작).zip";
+            down.href = selected_ver == "3.0.2" ? "/files/엔티티컨트롤러 Entitycontroller V3.zip" : "/files/엔티티 컨트롤러Entity Controller " + selected_ver + "(마인카트 제작).zip";
             break;
         case "n1tc":
-            down.href = "files/" + "1호선 납작이 for MTC 1.0.2(마인카트 제작).zip";
+            down.href = "/files/" + "1호선 납작이 for MTC 1.0.2(마인카트 제작).zip";
             break;
         case "tcak":
-            down.href = "files/" + "MTC&MCA 한국어팩(마인카트 제작).zip";
+            down.href = "/files/" + "MTC&MCA 한국어팩(마인카트 제작).zip";
             break;
+        case "test":
+            down.href = "/files/1호선 개조저항LQ_forMCA2.mcaddon";
         default:
             alert("다운로드 할 파일을 찾지 못했습니다.");
     }
@@ -109,7 +114,7 @@ function mtt() {
 
 function n1ca() {
     document.title = "1호선 납작이";
-    mod_title.innerHTML = "1호선 납작이";
+    mod_title.innerHTML = "<span style='text-decoration: line-through;'>1호선 납작이</span><br>업데이트 후 재배포 예정입니다!";
     mod_description.innerHTML = "1호선 납작이 입니다. 아래에 코드를 입력하고 다운 받으세요!";
     write_info("2.0.0", "2023-8-13", "마인카트", "필요없음", "mca모드");
     show_screenshot("n1ca", "n1ca_1,n1ca_2,n1ca_3", "webp");
@@ -119,7 +124,9 @@ function n1ca() {
 function n1tc() {
     document.title = "1호선 납작이 for MTC";
     mod_title.innerHTML = "1호선 납작이 for MTC";
-    mod_description.innerHTML = "MTC용 1호선 납작이 입니다. 아래에 코드를 입력하고 다운 받으세요!<a href='https://www.youtube.com/watch?v=_NxGA9i8Lcc&lc=UgwIEgC-ZzQS5xJOlCF4AaABAg'>영상 보기</a>";
+    document.getElementById('video_iframe').src = 'https://www.youtube.com/embed/_NxGA9i8Lcc?si=M8ZEnRukfm9lUGE0';
+    document.getElementById('youtube_video').style.display = 'flex';
+    mod_description.innerHTML = "MTC용 1호선 납작이 입니다. 아래에 다운로드 버튼을 누르고 다운 받으세요!";
     document.getElementById("code_space").style.display = 'none';
     down.style.display = 'block';
     document.getElementById("img").src = "resource/n1tc/n1tc_1.webp";
@@ -167,4 +174,14 @@ function notf() {
     img.src = "resource/ui/page_not_found.webp";
     document.getElementById("image_viewer").style.backgroundColor = '#0011ff';
     downrel();
+}
+
+
+function test() {
+    mod_title.innerHTML = "Test";
+    mod_description.innerHTML = "MTC와 MCA의 아이템 이름을 한국어로 바꿔줍니다.";
+    document.getElementById("code_space").style.display = 'none';
+    down.style.display = 'block';
+    write_info("1.0.0", "2023-11-16", "마인카트", "필요없음", "필요없음");
+    version_select("1.0.0");
 }
