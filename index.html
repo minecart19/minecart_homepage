@@ -224,7 +224,7 @@
     </header>
 
 
-    <div class="snowflake">
+    <!-- <div class="snowflake">
         ❅
     </div>
     <div class="snowflake">
@@ -283,12 +283,12 @@
     </div>
     <div class="snowflake">
         ❄
-    </div>
+    </div> -->
 
     <!-- 네비게이션 바 -->
     <nav>
         <div>
-            <button id="navl" onclick="location.href='index.html'">마인카트 홈페이지</button>
+            <button id="navl" onclick="location.href='index.html'" lang="ko">마인카트 홈페이지</button>
         </div>
         <div>
             <button class="navm" onclick="location.href='addon_list.html'">다운로드</button>
@@ -317,14 +317,14 @@
             <section class="wave_bgs" id="wave1_color">
                 <!-- 메뉴버튼 -->
                 <div class="menu_button_section">
-                    <h1>주요메뉴</h1>
+                    <h1 lang="ko">주요메뉴</h1>
                     <div class="menu_buttons">
                         <a href="addon_list.html">
                             <div>
                                 <img src="./resource/ui/menu_addon_download.svg">
                                 <div>
-                                    <p class="title">마크BE 애드온</p>
-                                    <p class="describe">다양한 마인크래프트BE 애드온를 구경하고 다운로드 하세요!</p>
+                                    <p lang="ko" class="title">마크BE 애드온</p>
+                                    <p lang="ko" class="describe">다양한 마인크래프트BE 애드온를 구경하고 다운로드 하세요!</p>
                                 </div>
                             </div>
                         </a>
@@ -332,8 +332,8 @@
                             <div>
                                 <img src="./resource/ui/menu_tool.svg">
                                 <div>
-                                    <p class="title">도구들</p>
-                                    <p class="describe">전광판 이미지 제작기등 다양한 도구들을 둘러보세요!(현재는 led전광판 틀 생성기만 있음)</p>
+                                    <p lang="ko" class="title">도구들</p>
+                                    <p lang="ko" class="describe">전광판 이미지 제작기등 다양한 도구들을 둘러보세요!(현재는 led전광판 틀 생성기만 있음)</p>
                                 </div>
                             </div>
                         </a>
@@ -341,8 +341,8 @@
                             <div>
                                 <img src="./resource/ui/menu_link.svg">
                                 <div>
-                                    <p class="title">함께보면 좋은 사이트/프로그램</p>
-                                    <p class="describe">모드제작,게임플레이,자료공유 등과 관련된 여러 사이트들와 프로그램들을 소개합니다!</p>
+                                    <p lang="ko" class="title">함께보면 좋은 사이트/프로그램</p>
+                                    <p lang="ko" class="describe">모드제작,게임플레이,자료공유 등과 관련된 여러 사이트들와 프로그램들을 소개합니다!</p>
                                 </div>
                             </div>
                         </a>
@@ -375,7 +375,8 @@
                             </h1>
                             <div>
                                 <div class="addon_news_item_imgContainer">
-                                    <img src="resource/n1tc/n1tc_1.webp" alt="이미지">
+                                    <a href="addon_download.html?name=n1tc"><img src="resource/n1tc/n1tc_1.webp"
+                                            alt="이미지"></a>
                                 </div>
                                 <div>
                                     <div class="addon_news_item_title">MTC용 1호선 납작이</div>
@@ -400,7 +401,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="new_addon_more_addon_button" href="download.html" target="_self">
+                    <a class="new_addon_more_addon_button" href="addon_list.html" target="_self">
                         <div></div>
                         <h1>다른 것들도 더 찾아보기</h1>
                     </a>
@@ -424,7 +425,9 @@
 
             <section class="wave_bgs" id="wave3_color">
                 <div class="social">
+                    <h1>소통하고 </h1>
                     <div>
+                        <a><img src="" alt=""></a>
                     </div>
                 </div>
                 <div class="fit_content_padding" style="height: 150px"></div>
@@ -503,14 +506,6 @@
             </form>
         </div>
     </footer>
-
-
-    <!-- 주의: 사이트를 배포할 때는 "development.js"를 "production.min.js"로 대체하세요. -->
-    <!-- <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script> -->
-    <!-- <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script> -->
-
-    <!-- 만든 React 컴포넌트를 실행. -->
-    <!-- <script src="like_button.js"></script> -->
 </body>
 
 </html>

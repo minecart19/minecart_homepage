@@ -27,6 +27,59 @@
             <button class="navm">설명서</button>
             <button class="navm">로그인</button>
         </div>
+        <style>
+            main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+
+            section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 80%;
+                border-top: 3px solid #000000;
+                padding-top: 2rem;
+            }
+
+            #guide_type_con {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            .guide_type_icon {
+                text-decoration: none;
+                color: #000000;
+            }
+
+            .guide_type_icon:hover h1::after {
+                content: "▶";
+            }
+
+            .guide_type_icon>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 200px;
+                height: 200px;
+            }
+
+            .guide_type_icon>div>h1 {
+                width: 80%;
+                font-size: 15pt;
+                font-weight: 500;
+                text-align: left;
+            }
+
+            .guide_type_icon>div>img {
+                width: 80%;
+                height: 80%;
+            }
+        </style>
     </nav>
 
     <!-- 메인 -->
@@ -34,8 +87,35 @@
         <header>
             <h1>사용 설명서/가이드</h1>
         </header>
-        <h1>제작중..</h1>
-        <h2>빠른 시일 내에 개발을 완료하겠습니다.</h2>
+        <section>
+            <h1>주요 가이드</h1>
+            <div id="guide_type_con">
+                <a class="guide_type_icon" href="">
+                    <div>
+                        <img src="resource/c1ca/c1ca.webp" alt="">
+                        <h1>애드온 적용방법</h1>
+                    </div>
+                </a>
+                <a class="guide_type_icon" href="">
+                    <div>
+                        <img src="resource/c1ca/c1ca.webp" alt="">
+                        <h1>MTC사용방법</h1>
+                    </div>
+                </a>
+                <a class="guide_type_icon" href="">
+                    <div>
+                        <img src="resource/c1ca/c1ca.webp" alt="">
+                        <h1>MCA사용방법</h1>
+                    </div>
+                </a>
+                <a class="guide_type_icon" href="">
+                    <div>
+                        <img src="resource/c1ca/c1ca.webp" alt="">
+                        <h1>EntityController 사용방법</h1>
+                    </div>
+                </a>
+            </div>
+        </section>
     </main>
 </body>
 
